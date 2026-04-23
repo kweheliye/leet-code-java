@@ -4,15 +4,19 @@ package org.code.challenges.leetcode.recursive;
 public class LogN {
 
     // O(Log n) Func , n = 8 Log base 2 of 8 = 3
-    public static double logFunc(double n) {
-        if (n == 0)
+    public static int fib(int n) {
+        if (n == 0 || n ==1)
             return n;
-        System.out.println("n=" + n);
-        n = Math.floor(n / 2);
-        return logFunc(n);
+
+        if(n == 4){
+            System.out.println("");
+            return 0;
+        }
+
+        return fib(n - 1) + fib(n - 2);
     }
 
-    public static void main(String args[]) {
-        System.out.println(logFunc(8));
+    public static void main(String[] args) {
+        System.out.println(fib(6));
     }
 }

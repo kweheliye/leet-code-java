@@ -1,8 +1,7 @@
 package org.code.challenges.leetcode.java8;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.*;
 import java.util.stream.Collectors;
 
 //https://medium.com/javarevisited/you-dont-know-java-streams-in-practice-do-you-826e6aebba81
@@ -10,6 +9,8 @@ public class JavaStreams {
 
     public static void findEvenSum() {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        numbers.stream().map(BigDecimal::valueOf).toList();
         int sum = numbers.stream().filter(number -> number % 2 == 0).mapToInt(n -> n).sum();
         System.out.println(sum);
     }
@@ -39,4 +40,5 @@ public class JavaStreams {
         squareRoot();
         largestNumber();
     }
+
 }

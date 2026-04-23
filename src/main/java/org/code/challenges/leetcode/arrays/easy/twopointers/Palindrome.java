@@ -17,6 +17,7 @@ public class Palindrome {
         return true;
     }
 
+
     public static void main(String[] args) {
         Palindrome.checkIfPalindrome("racecar");
         Palindrome.checkIfPalindrome("abcdcba");
