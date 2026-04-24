@@ -28,4 +28,5 @@ class RotateString796Test {
         assertFalse(solution.rotateString("abc" , "abbc"));
     }
 
+
 }
